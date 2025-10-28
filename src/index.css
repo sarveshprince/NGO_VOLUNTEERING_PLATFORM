@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* NGO Platform Primary - Trust Blue */
+    --primary: 210 95% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 95% 36%;
+
+    /* Community Green - Growth & Impact */
+    --secondary: 152 69% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 152 69% 38%;
+
+    /* Warm backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Action Orange - Energy */
+    --accent: 24 95% 58%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 24 95% 52%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 95% 42%;
+
+    --radius: 0.75rem;
+
+    /* NGO Platform Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 95% 42%) 0%, hsl(152 69% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-impact: linear-gradient(135deg, hsl(152 69% 45%) 0%, hsl(24 95% 58%) 100%);
+    
+    /* Shadows for depth */
+    --shadow-sm: 0 2px 8px hsl(210 95% 42% / 0.08);
+    --shadow-md: 0 4px 16px hsl(210 95% 42% / 0.12);
+    --shadow-lg: 0 8px 32px hsl(210 95% 42% / 0.16);
+    --shadow-glow: 0 0 40px hsl(152 69% 45% / 0.3);
+
+    /* Smooth transitions */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 28% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 16%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 25% 16%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 95% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 95% 42%;
+
+    --secondary: 152 69% 48%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 152 69% 42%;
+
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 24 95% 58%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 24 95% 52%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 24%;
+    --input: 217 33% 24%;
+    --ring: 210 95% 48%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(210 95% 38%) 0%, hsl(152 69% 42%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(215 25% 16%) 0%, hsl(217 33% 18%) 100%);
+    --gradient-impact: linear-gradient(135deg, hsl(152 69% 42%) 0%, hsl(24 95% 55%) 100%);
+    
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(152 69% 45% / 0.25);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-impact {
+    background: var(--gradient-impact);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition);
+  }
+}
