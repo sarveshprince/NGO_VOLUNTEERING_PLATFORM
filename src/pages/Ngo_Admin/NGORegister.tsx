@@ -112,7 +112,7 @@ const NGORegister = () => {
 
       setLoading(true);
 
-      const response = await fetch(`http://localhost:8080/ngos/register/${username}`, {
+      const response = await fetch(`https://ngobackend-production.up.railway.app/register/${username}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

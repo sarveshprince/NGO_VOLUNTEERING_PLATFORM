@@ -1,6 +1,6 @@
 import axios, { type InternalAxiosRequestConfig } from "axios";
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://ngobackend-production.up.railway.app";
 
 export interface LoginParams {
   username: string;

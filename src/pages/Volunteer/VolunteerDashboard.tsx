@@ -7,7 +7,7 @@ import { Calendar, Clock, MapPin, Heart, TrendingUp, Award } from 'lucide-react'
 import { toast } from 'sonner';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://ngobackend-production.up.railway.app";
 
 const VolunteerDashboard = () => {
   const [recommendations, setRecommendations] = useState<any[]>([]);

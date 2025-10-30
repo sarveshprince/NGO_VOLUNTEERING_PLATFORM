@@ -76,7 +76,7 @@ const AdminDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get<User[]>('http://localhost:8080/volunteers');
+      const res = await axios.get<User[]>('https://ngobackend-production.up.railway.app/volunteers');
       setUsers(res.data);
 
       const roleCount = {

@@ -6,7 +6,7 @@ import { BarChart, Users, TrendingUp, Target, Calendar, Award, LogOut } from 'lu
 import { toast } from 'sonner';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'https://ngobackend-production.up.railway.app';
 
 const ProgramManagerDashboard = () => {
   const [impactData, setImpactData] = useState({

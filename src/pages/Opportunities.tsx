@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Clock, Users, Calendar, Search } from "lucide-react";
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://ngobackend-production.up.railway.app";
 
 const Opportunities = () => {
   const [searchTerm, setSearchTerm] = useState("");

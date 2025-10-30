@@ -11,7 +11,7 @@ import { Plus, Calendar, Users, MapPin, Clock, LogOut } from 'lucide-react';
 import { toast } from 'sonner';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'https://ngobackend-production.up.railway.app';
 
 const NGOCoordinatorDashboard = () => {
   const [opportunities, setOpportunities] = useState([]);
